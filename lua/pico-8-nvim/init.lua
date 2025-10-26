@@ -5,7 +5,7 @@ end
 vim.g.loaded_pico8_connect_nvim = true
 
 vim.api.nvim_create_user_command("HelloWorld", function()
-  require("helloworld").say_hello()
+  require("pico_8_nvim").say_hello()
 end, {})
 
 
