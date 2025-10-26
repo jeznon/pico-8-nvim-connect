@@ -1,9 +1,8 @@
--- lua/pico-8-nvim
-local M = {}
+if vim.g.loaded_pico8_connect then return end
+vim.g.loaded_pico8_connect = true
 
-function M.say_hello()
-  vim.notify("👋 Hello from my first Neovim plugin written in Lua!", vim.log.levels.INFO)
-end
+vim.api.nvim_create_user_command('Pico8Hello', function()
+  require('pico_8_nvim').hello()
+end, {})
 
-return M
 
