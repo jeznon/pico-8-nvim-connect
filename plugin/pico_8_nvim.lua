@@ -5,14 +5,14 @@ end
 vim.g.loaded_pico8_connect = true
 
 vim.api.nvim_create_user_command("Pico8Pick", function()
-  require("pico8_connect").pick_cartridge()
+  require("pico_8_nvim").pick_cartridge()
 end, {})
 
 vim.api.nvim_create_user_command("Pico8Inject", function()
-  require("pico8_connect").inject_cartridge_code()
+  require("pico_8_nvim").inject_cartridge_code()
 end, {})
 
 vim.api.nvim_create_user_command("Pico8SetCartsDir", function()
-  require("pico8_connect").set_carts_dir()
+  require("pico_8_nvim").set_carts_dir()
 end, {})
 
